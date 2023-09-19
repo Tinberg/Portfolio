@@ -1,0 +1,288 @@
+/* =====================
+   Global Variables
+   ===================== */
+:root {
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-22: 1.4rem;
+  --font-size-25: 1.6rem;
+  --font-size-30: 1.875rem;
+  --font-size-45: 2.8rem;
+  --font-weight-bold: 700;
+  --color-gray37: #5e5e5e;
+  --color-black: black;
+  --color-white:white;
+  --color-dark-shade: #2c3e50;
+  --background-color-light-gray: #e0e0e0;
+  --background-color-white: white;
+  --background-color-black:black;
+  --background-linear-gradient1:#f7f9fa;
+  --background-linear-gredient2: #e5ebed;
+  
+}
+/* =====================
+   Base/Reset Styles
+   ===================== */
+
+* {
+  font-family: "Source Sans 3", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  color: var(--color-black);
+}
+body{
+margin: 20px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* =====================
+   Utility/Helper Styles
+   ===================== */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+h2{
+    margin-top: 200px;
+}
+h1{
+    margin-top: 200px;
+}
+
+.section-background {
+    background: linear-gradient(to right, var(--background-linear-gradient1), var(--background-linear-gredient2), var(--background-linear-gradient1));
+    padding: 0 20px 200px;
+    margin: 200px -20px 0;
+   }
+hr {
+  width: 300px;
+  border-bottom: 2px solid;
+  color: var(--color-gray37);
+  margin: 40px auto;
+}
+
+.tech-stack-container {
+  display: flex;
+}
+.tech-stack-container li {
+  padding: 5px 15px;
+  margin: 5px;
+  background-color: var(--background-color-light-gray);
+  border-radius: 10px;
+  font-size: var(--font-size-18);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: var(--font-weight-bold);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--background-color-white);
+  margin: 0 -20px;
+}
+.full-name {
+  margin: 35px 35px 15px 80px;
+  font-size: var(--font-size-25);
+}
+.header-navigation ul {
+  display: flex;
+}
+.header-navigation li {
+  margin: 25px 5px 10px;
+  padding: 5px 35px 5px;
+  font-size: var(--font-size-22);
+  border-radius: 15px;
+}
+.header-navigation li:hover {
+  background-color: var(--background-color-light-gray);
+  cursor: pointer;
+}
+.header-navigation .corner-li {
+  margin-right: 80px;
+  background-color: var(--background-color-black);
+  color: var(--color-white);
+  border-radius: 15px;
+}
+.header-navigation .corner-li:hover {
+  background-color: var(--color-dark-shade);
+}
+
+/* =====================
+   Section1 HERO 
+   ===================== */
+
+h1 {
+  font-size: var(--font-size-45);
+}
+
+.hero-about-paragraph {
+  margin-bottom: 60px;
+  width: 800px;
+  font-size: var(--font-size-18);
+}
+.button-container {
+  font-size: var(--font-size-22);
+}
+.button-container a {
+  padding: 10px 50px;
+  margin: 0 20px;
+  border: 2px solid;
+  border-radius: 20px;
+}
+.button-container a:hover {
+  cursor: pointer;
+}
+.contact-button {
+  background: var(--background-color-black);
+  color: var(--color-white);
+}
+.project-button:hover {
+  background-color: var(--background-color-light-gray);
+}
+.contact-button:hover {
+  background-color: var(--color-dark-shade);
+}
+
+/* =====================
+   Section2 and Section3
+   ===================== */
+  
+h2 {
+  font-size: var(--font-size-30);
+}
+h3 {
+  font-size: var(--font-size-22);
+  margin: 25px 0 25px 0;
+  text-align: left;
+}
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+}
+.project-card {
+  flex: 1;
+  max-width: 700px;
+}
+.project-card img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  min-width: 500px;
+}
+.project-container hr {
+  width: 100%;
+}
+.project-text {
+  text-align: left;
+  margin-bottom: 25px;
+}
+.github-live-link {
+  display: flex;
+}
+.github-live-link li {
+  margin: 5px;
+}
+.fa-github,
+.fa-paperclip {
+  padding: 10px;
+  font-size: 35px;
+  /* transition: transform 0.3s ease-in-out; */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.fa-github:hover,
+.fa-paperclip:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: var(--color-dark-shade);
+}
+
+/* =====================
+   Section 4
+   ===================== */
+
+.form-container {
+    display:flex ;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    font-size: var(--font-size-18);
+    max-width: 1500px;
+    width: 100%;
+    
+}
+.input-text {
+    border: 1px solid;
+    border-radius: 5px;
+    width: 100%;
+    padding:10px;
+    font-size: var(--font-size-16);
+}
+.input-text:focus {
+    outline-color: black;
+}
+.input-textarea {
+    height: 130px;
+}
+.input-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input-left input{
+    height: 35px;
+}
+
+.input-left, .input-right{
+    width: 48%;
+    
+}
+.input-right {
+   display: flex;
+   flex-direction: column;
+}
+.submit-button {
+    padding: 5px 40px;
+    border-radius: 10px;
+    font-size: var(--font-size-22);
+    color: var(--color-white);
+    background-color: var(--background-color-black);
+    margin-top: 10px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+.submit-button:hover {
+    background-color: var(--color-dark-shade);
+}
+
+/* =====================
+   Footer
+   ===================== */
+
+   footer{
+    margin: 150px -20px 50px;
+    color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+   }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathias Tinberg|Frontend Web Developer</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0933736d52.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="full-name">Mathias Tinberg</div>
+      <nav class="header-navigation">
+        <ul>
+          <li><a href="#hero-section">Home</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#projects-section">Projects</a></li>
+          <li class="corner-li"><a href="#contact-section">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- SECTION 1 HERO -->
+      <section id="hero-section">
+        <h1>Mathias Tinberg</h1>
+        <hr />
+        <p class="hero-about-paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          interdum urna quis magna lobortis, eget finibus urna vestibulum. Sed
+          nec ex non justo dictum venenatis. Fusce nec purus nec mauris posuere
+          malesuada
+        </p>
+        <div class="button-container">
+          <a class="project-button">Projects</a>
+          <a class="contact-button">Contact</a>
+        </div>
+      </section>
+      <!-- Section 2 -->
+      <section id="about-section" class="section-background">
+        <h2>About</h2>
+        <hr />
+        <p class="hero-about-paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          interdum urna quis magna lobortis, eget finibus urna vestibulum. Sed
+          nec ex non justo dictum venenatis. Fusce nec purus nec mauris posuere
+          malesuada
+        </p>
+        <h3>Tech Stack</h3>
+        <ul class="tech-stack-container">
+          <li>
+            <p>HTML</p>
+          </li>
+          <li>
+            <p>CSS</p>
+          </li>
+          <li>
+            <p>Javascript</p>
+          </li>
+          <li>
+            <p>Github</p>
+          </li>
+          <li>
+            <p>Figma</p>
+          </li>
+        </ul>
+      </section>
+      <!-- Section 3 -->
+      <section id="projects-section">
+        <h2>Projects</h2>
+        <hr />
+        <div class="project-container">
+          <div class="project-card">
+            <img src="/images/Community_science_museum.png" />
+            <h3>Community science museum</h3>
+            <hr>
+            <p class="project-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              interdum urna quis magna lobortis, eget finibus urna vestibulum.
+              Sed nec ex non justo dictum venenatis. Fusce nec purus nec mauris
+              posuere malesuada
+            </p>
+            <ul class="tech-stack-container">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Figma</li>
+                <li>Midjourney</li>
+            </ul>
+            <ul class="github-live-link">
+                <li>
+                    <a href="https://github.com/Tinberg/Semester-Project-1" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                </li>
+                <li>
+                    <a href="https://tinberg-community-science-museum.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-paperclip"></i></a>
+                </li>
+            </ul>
+          </div>
+            <div class="project-card">
+              <img src="/images/Rainydays.png" />
+              <h3>Rainydays</h3>
+              <hr>
+              <p class="project-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                interdum urna quis magna lobortis, eget finibus urna vestibulum.
+                Sed nec ex non justo dictum venenatis. Fusce nec purus nec mauris
+                posuere malesuada
+              </p>
+              <ul class="tech-stack-container">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Javascript</li>
+                  <li>Figma</li>
+                  <li>Midjourney</li>
+              </ul>
+              <ul class="github-live-link">
+                  <li>
+                      <a href="https://github.com/Tinberg/Rainydays" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://rainydays-assignment.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-paperclip"></i></a>
+                  </li>
+              </ul>
+            </div>
+      </section>
+      <!-- Section 4 -->
+      <section id="contact-section" class="section-background">
+        <h2>Contact</h2>
+        <hr>
+        <form class="form-container">
+            <div class="input-left">
+                <label for="name">Name</label>
+                <input type="text" id="name"
+                name="name" class="input-text" placeholder="John Doe">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="input-text" placeholder="example@example.com">
+            </div>
+            <div class="input-right">
+                <label for message>Your message</label>
+                <textarea id="message" name="message" class="input-text input-textarea" placeholder="Enter your message here" ></textarea>
+                <button class="submit-button" type="submit">Send Message</button>
+            </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+        <hr>
+        <p>© Copyright 2023. Made by Mathias Tinberg</p>
+    </footer>
+  </body>
+</html>

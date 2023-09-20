@@ -7,6 +7,7 @@ exports.handler = async function(event, context) {
     }
 
     const { name, email, message } = JSON.parse(event.body);
+    const senderEmail = 'tinberg92@hotmail.com';
 
     const transporter = nodemailer.createTransport({
         service: 'hotmail', // For example, if you're using Gmail. Otherwise, adjust accordingly.
@@ -17,7 +18,7 @@ exports.handler = async function(event, context) {
     });
 
     const mailOptions = {
-        from: `tinberg92@hotmail.com`,
+        from: senderEmail,
         to: 'tinberg92@hotmail.com', // Your email where you want to receive the messages.
         subject: `Message from ${name}`,
         text: message

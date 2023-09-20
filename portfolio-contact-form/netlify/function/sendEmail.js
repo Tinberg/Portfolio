@@ -11,7 +11,7 @@ exports.handler = async function(event, context) {
         service: 'hotmail', // For example, if you're using Gmail. Otherwise, adjust accordingly.
         auth: {
             user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
+            pass: process.env.sjcukebelnonmpxj
         }
     });
 

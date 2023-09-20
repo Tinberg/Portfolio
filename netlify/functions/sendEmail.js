@@ -11,7 +11,7 @@ exports.handler = async function(event, context) {
     const transporter = nodemailer.createTransport({
         service: 'hotmail', // For example, if you're using Gmail. Otherwise, adjust accordingly.
         auth: {
-            user: process.env.EMAIL_USER,
+            user: email,
             pass: process.env.EMAIL_PASS
         }
     });

@@ -1,7 +1,7 @@
 {
-  "name": "portfolio-contact-form",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "fiks så man kan trykke på knappene på linkene i header. lag den responsive js:  fiks dark mode toggle button parallax scrolling/animations on scroll som AOS form validation",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

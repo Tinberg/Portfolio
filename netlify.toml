@@ -1,2 +1,2 @@
 [build]
-  functions = "portfolio-contact-form/netlify/functions"
+  functions = "netlify/functions"

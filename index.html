@@ -41,8 +41,8 @@
           malesuada
         </p>
         <div class="button-container">
-          <a class="project-button">Projects</a>
-          <a class="contact-button">Contact</a>
+          <a href="#projects-section" class="project-button">Projects</a>
+          <a href="#contact-section" class="contact-button">Contact</a>
         </div>
       </section>
       <!-- Section 2 -->
@@ -135,7 +135,7 @@
       <section id="contact-section" class="section-background">
         <h2>Contact</h2>
         <hr>
-        <form class="form-container">
+        <form class="form-container" id="contactForm" action="/.netlify/functions/sendEmail" method="POST">
             <div class="input-left">
                 <label for="name">Name</label>
                 <input type="text" id="name"
@@ -153,7 +153,7 @@
     </main>
     <footer>
         <hr>
-        <p>© Copyright 2023. Made by Mathias Tinberg</p>
+        <p></p>
     </footer>
   </body>
 </html>

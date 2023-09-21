@@ -8,6 +8,7 @@ document.querySelector(".form-container").addEventListener("submit", async funct
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
+    const contactInfo = document.getElementById("contactInfo").value;
 
     const response = await fetch("/.netlify/functions/sendEmail", {
         method: "POST",

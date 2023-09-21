@@ -6,7 +6,7 @@ exports.handler = async function(event, context) {
         return { statusCode: 405, body: "Method Not Allowed" };
     }
 
-    const { name, email, message } = JSON.parse(event.body);
+    const { name, email, message, contactInfo } = JSON.parse(event.body);
     const senderEmail = 'tinberg92@hotmail.com';
 
     const transporter = nodemailer.createTransport({
@@ -21,7 +21,7 @@ exports.handler = async function(event, context) {
         from: senderEmail,
         to: 'tinberg92@hotmail.com', // Your email where you want to receive the messages.
         subject: `Message from ${name}`,
-        text: message,
+        text:`message:${message}\nEmail from: ${contactInfo}`
         
     };
 
@@ -32,3 +32,4 @@ exports.handler = async function(event, context) {
         return { statusCode: 500, body: "Error sending email: " + error.message };
     }
 };
+

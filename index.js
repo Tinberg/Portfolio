@@ -2,6 +2,7 @@
 const year = new Date().getFullYear();
 document.querySelector('footer p').textContent = `© Copyright ${year}. Made by Mathias Tinberg`;
 
+// nodemailer 
 document.querySelector(".form-container").addEventListener("submit", async function(e) {
     e.preventDefault();
     
@@ -27,32 +28,3 @@ document.querySelector(".form-container").addEventListener("submit", async funct
 
 
 
-// form submission serverless function
-// document.getElementById('contactForm').addEventListener('submit', async (e) => {
-//     e.preventDefault();
-
-//     const formData = new FormData(e.target);
-//     const data = {
-//         name: formData.get('name'),
-//         email: formData.get('email'),
-//         message: formData.get('message'),
-//     };
-
-//     try {
-//         const response = await fetch(e.target.action, {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//             },
-//             body: JSON.stringify(data),
-//         });
-
-//         if (response.ok) {
-//             alert('Email sent successfully!');
-//         } else {
-//             alert('Error sending email!');
-//         }
-//     } catch (error) {
-//         alert('An error occurred: ' + error.message);
-//     }
-// });

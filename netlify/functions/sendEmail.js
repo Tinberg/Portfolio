@@ -19,7 +19,7 @@ exports.handler = async function(event, context) {
 
     const mailOptions = {
         from: senderEmail,
-        to: 'tinberg92@hotmail.com', // Your email where you want to receive the messages.
+        to: senderEmail, // Your email where you want to receive the messages.
         subject: `Message from ${name}`,
         text:`message:${message}\nEmail from: ${contactInfo}`
         

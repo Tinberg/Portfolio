@@ -274,6 +274,9 @@ h3 {
 .submit-button:hover {
     background-color: var(--color-dark-shade);
 }
+.hidden{
+  display: none;
+}
 
 /* =====================
    Footer

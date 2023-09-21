@@ -12,7 +12,7 @@ document.querySelector(".form-container").addEventListener("submit", async funct
 
     const response = await fetch("/.netlify/functions/sendEmail", {
         method: "POST",
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify({ name, email, message, contactInfo }),
         headers: {
             "Content-Type": "application/json"
         }

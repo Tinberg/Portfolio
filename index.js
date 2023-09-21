@@ -20,9 +20,9 @@ document.querySelector(".form-container").addEventListener("submit", async funct
     });
 
     if (response.ok) {
-        alert("Email sent!");
+        alert("Your message has been sent successfully!");
     } else {
-        alert("Error sending email.");
+        alert("An error occurred while sending your message. Please try again later.");
     }
 });
 

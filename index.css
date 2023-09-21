@@ -105,21 +105,25 @@ header {
 }
 .header-navigation li {
   margin: 25px 5px 10px;
+}
+.header-navigation a{
   padding: 5px 35px 5px;
   font-size: var(--font-size-22);
   border-radius: 15px;
 }
-.header-navigation li:hover {
+.header-navigation a:hover {
   background-color: var(--background-color-light-gray);
   cursor: pointer;
 }
 .header-navigation .corner-li {
   margin-right: 80px;
+}
+.header-navigation .corner-li a {
   background-color: var(--background-color-black);
   color: var(--color-white);
   border-radius: 15px;
 }
-.header-navigation .corner-li:hover {
+.header-navigation .corner-li a:hover {
   background-color: var(--color-dark-shade);
 }
 

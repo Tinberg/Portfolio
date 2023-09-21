@@ -21,7 +21,6 @@ exports.handler = async function(event, context) {
         from: senderEmail,
         to: 'tinberg92@hotmail.com', // Your email where you want to receive the messages.
         subject: `Message from ${name}`,
-        text: message,
         text:`message:${message}/nEmail from: ${contactInfo}`
     };
 

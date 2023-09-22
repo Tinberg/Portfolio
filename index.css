@@ -224,14 +224,15 @@ input:checked + .slider .label.dark {
 h1 {
   font-size: var(--font-size-45);
 }
-
 .hero-about-paragraph {
   margin-bottom: 60px;
-  width: 800px;
-  font-size: var(--font-size-18);
+  max-width: 1200px;
+}
+.hero-paragraph {
+  font-size: var(--font-size-22);
 }
 .button-container {
-  font-size: var(--font-size-22);
+  font-size: var(--font-size-25);
 }
 .button-container a {
   padding: 10px 50px;
@@ -265,6 +266,15 @@ h3 {
   margin: 25px 0 25px 0;
   text-align: left;
 }
+.about-paragraph {
+  font-size: var(--font-size-18);
+  
+}
+.about-text-bold {
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
 .project-container {
   display: flex;
   flex-wrap: wrap;
@@ -288,6 +298,7 @@ h3 {
 .project-text {
   text-align: left;
   margin-bottom: 25px;
+  font-size: var(--font-size-18);
 }
 .github-live-link {
   display: flex;
@@ -383,4 +394,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+   }
+   .footer-text {
+    font-size: var(--font-size-18);
    }

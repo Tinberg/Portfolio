@@ -1,6 +1,6 @@
 // copyright
 const year = new Date().getFullYear();
-document.querySelector('footer p').textContent = `© Copyright ${year}. Made by Mathias Tinberg`;
+document.querySelector('#copyRight').textContent = `© Copyright ${year}. Made by Mathias Tinberg`;
 
 
 // nodemailer 

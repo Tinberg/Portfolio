@@ -2,6 +2,7 @@
 const year = new Date().getFullYear();
 document.querySelector('footer p').textContent = `© Copyright ${year}. Made by Mathias Tinberg`;
 
+
 // nodemailer 
 document.querySelector(".form-container").addEventListener("submit", async function(e) {
     e.preventDefault();
@@ -26,25 +27,3 @@ document.querySelector(".form-container").addEventListener("submit", async funct
     }
 });
 
-//dark/light mode
-const themeSwitch = document.getElementById("themeSwitch");
-const currentTheme = localStorage.getItem('theme');
-
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-
-    
-    if (currentTheme === 'dark') {
-        themeSwitch.checked = true;
-    }
-}
-
-themeSwitch.addEventListener("change", function() {
-    if (themeSwitch.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    }
-});

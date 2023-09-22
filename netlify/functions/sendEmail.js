@@ -10,7 +10,7 @@ exports.handler = async function(event, context) {
     const senderEmail = 'tinberg92@hotmail.com';
 
     const transporter = nodemailer.createTransport({
-        service: 'hotmail', // For example, if you're using Gmail. Otherwise, adjust accordingly.
+        service: 'hotmail', 
         auth: {
             user: process.env.EMAIL_USER,
             pass: process.env.EMAIL_PASS
@@ -19,7 +19,7 @@ exports.handler = async function(event, context) {
 
     const mailOptions = {
         from: senderEmail,
-        to: senderEmail, // Your email where you want to receive the messages.
+        to: senderEmail, 
         subject: `Message from ${name}`,
         text:`message:${message}\nEmail from: ${contactInfo}`
         

@@ -39,7 +39,7 @@ if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
 
     
-    if (currentTheme === 'light') {
+    if (currentTheme === 'dark') {
         themeSwitch.checked = true;
     }
 }

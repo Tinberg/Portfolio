@@ -295,6 +295,11 @@ h3 {
 .project-container hr {
   width: 100%;
 }
+.project-text-header {
+  text-align: left;
+  margin-bottom: 50px;
+  font-size: var(--font-size-22);
+}
 .project-text {
   text-align: left;
   margin-bottom: 25px;

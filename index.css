@@ -447,17 +447,12 @@ footer {
   label.switch {
     order: 3;
   }
-  .slider .label.light {
-    left: 0px;
-    bottom: 200px;
-    margin-top: 20px;
-    text-align: center;
-  }
-
+  .slider .label.light,
   .slider .label.dark {
     left: 0px;
     bottom: 200px;
     margin-top: 20px;
     text-align: center;
   }
+
 }

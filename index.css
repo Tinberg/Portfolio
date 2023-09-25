@@ -2,7 +2,7 @@
    Global Variables
    ===================== */
 :root {
-  --font-size-12: .745rem;
+  --font-size-12: 0.745rem;
   --font-size-16: 1rem;
   --font-size-18: 1.125rem;
   --font-size-22: 1.4rem;
@@ -48,7 +48,7 @@ html {
   color: var(--color-black);
 }
 body {
-  margin: 20px;
+  margin-right:20px ;
   color: var(--color-black);
   background-color: var(--background-color-white);
 }
@@ -60,11 +60,17 @@ a {
 /* =====================
    Utility/Helper Styles
    ===================== */
+   .content-wrapper {
+    margin-right: -20px;
+    overflow-x: hidden;
+   }
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin: 0px 20px 0 20px;
+  
 }
 h2 {
   margin-top: 200px;
@@ -72,6 +78,7 @@ h2 {
 h1 {
   margin-top: 200px;
 }
+
 
 .section-background {
   background: linear-gradient(
@@ -110,10 +117,10 @@ header {
   top: 0;
   width: 100%;
   background-color: var(--background-color-white);
-  margin: 0 -20px;
+  z-index: 10;
 }
 .full-name {
-  margin: 25px 35px 15px 80px;
+  margin: 25px 35px 15px 50px;
   font-size: var(--font-size-25);
 }
 
@@ -233,8 +240,6 @@ input:checked + .slider:before {
   display: none;
 }
 
-
-
 input:checked + .slider .label.light {
   display: none;
 }
@@ -242,8 +247,6 @@ input:checked + .slider .label.light {
 input:checked + .slider .label.dark {
   display: block;
 }
-
-
 
 /* =====================
    Section1 HERO 
@@ -297,6 +300,9 @@ h3 {
 }
 .about-paragraph {
   font-size: var(--font-size-18);
+  text-align: left;
+  width: 95%;
+
 }
 .about-text-bold {
   font-weight: 900;
@@ -324,7 +330,7 @@ h3 {
   width: 100%;
 }
 .project-text-header {
-  text-align: left;
+  text-align: center;
   margin-bottom: 50px;
   font-size: var(--font-size-22);
 }
@@ -365,7 +371,8 @@ h3 {
   text-align: left;
   font-size: var(--font-size-18);
   max-width: 1500px;
-  width: 100%;
+  width: 90%;
+  
 }
 .input-text {
   border: 1px solid;
@@ -434,6 +441,7 @@ footer {
 /* tablets and phone */
 
 @media screen and (max-width: 1024px) {
+ 
   .full-name {
     order: 2;
   }
@@ -442,7 +450,7 @@ footer {
   }
   .menu-icon {
     display: block;
-    margin-left: 30px;
+    margin-left: 50px;
   }
 
   #menuItems {
@@ -461,17 +469,49 @@ footer {
     text-align: center;
     font-size: var(--font-size-12);
   }
-
-
 }
 
 @media screen and (max-width: 504px) {
+  body {
+    margin: 0;
+  }
+  p, h3 {
+    margin: 0 10px;
+  }
+ 
+
+  .full-name {
+    font-size: var(--font-size-22);
+  }
+
   .button-container {
     font-size: var(--font-size-25);
     flex-direction: column;
-    gap: 20px;   
+    gap: 20px;
   }
-  body {
-    margin: 0;
+
+  .project-card img {
+    width: 100vw;
+    min-width: auto;
+  }
+  .section-background {
+    padding: 0 0 200px;
+    margin: 200px 0 0;
+  }
+
+  .tech-stack-container {
+    flex-direction: column;
+  }
+
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    margin: 150px 0;
+  }
+  #copyRight {
+    text-align: center;
   }
 }

@@ -11,22 +11,21 @@
   --font-weight-bold: 700;
   --color-gray37: #5e5e5e;
   --color-black: black;
-  --color-white:white;
+  --color-white: white;
   --color-dark-shade: #2c3e50;
   --background-color-light-gray: #e0e0e0;
   --background-color-white: white;
-  --background-color-black:black;
-  --background-linear-gradient1:#f7f9fa;
+  --background-color-black: black;
+  --background-linear-gradient1: #f7f9fa;
   --background-linear-gredient2: #e5ebed;
-  
 }
 [data-theme="dark"] {
-  --color-black: #FFFFFF;
+  --color-black: #ffffff;
   --background-color-white: #000000;
   --background-linear-gradient1: #121212;
-    --background-linear-gredient2: #1c1c1c;
-  --background-color-light-gray:#2c3e50;
---background-color-black:#5e5e5e;
+  --background-linear-gredient2: #1c1c1c;
+  --background-color-light-gray: #2c3e50;
+  --background-color-black: #5e5e5e;
 }
 /* =====================
    Base/Reset Styles
@@ -47,16 +46,15 @@ html {
   scroll-behavior: smooth;
   color: var(--color-black);
 }
-body{
-margin: 20px;
-color: var(--color-black);
-background-color: var(--background-color-white);
-
+body {
+  margin: 20px;
+  color: var(--color-black);
+  background-color: var(--background-color-white);
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 /* =====================
    Utility/Helper Styles
@@ -67,18 +65,23 @@ section {
   align-items: center;
   text-align: center;
 }
-h2{
-    margin-top: 200px;
+h2 {
+  margin-top: 200px;
 }
-h1{
-    margin-top: 200px;
+h1 {
+  margin-top: 200px;
 }
 
 .section-background {
-    background: linear-gradient(to right, var(--background-linear-gradient1), var(--background-linear-gredient2), var(--background-linear-gradient1));
-    padding: 0 20px 200px;
-    margin: 200px -20px 0;
-   }
+  background: linear-gradient(
+    to right,
+    var(--background-linear-gradient1),
+    var(--background-linear-gredient2),
+    var(--background-linear-gradient1)
+  );
+  padding: 0 20px 200px;
+  margin: 200px -20px 0;
+}
 hr {
   width: 300px;
   border-bottom: 2px solid;
@@ -120,7 +123,7 @@ header {
 .header-navigation li {
   margin: 30px 5px 10px;
 }
-.header-navigation a{
+.header-navigation a {
   padding: 5px 35px 5px;
   font-size: var(--font-size-22);
   border-radius: 15px;
@@ -146,7 +149,6 @@ header {
   display: none;
   cursor: pointer;
   margin-top: 30px;
-  
 }
 #menuItems.active {
   display: flex;
@@ -158,7 +160,6 @@ header {
   margin: 6px 0;
   transition: 0.4s;
 }
-
 
 /* Switch styles */
 .switch {
@@ -183,7 +184,7 @@ header {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -194,7 +195,7 @@ header {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -279,7 +280,7 @@ h1 {
 /* =====================
    Section2 and Section3
    ===================== */
-  
+
 h2 {
   font-size: var(--font-size-30);
 }
@@ -290,7 +291,6 @@ h3 {
 }
 .about-paragraph {
   font-size: var(--font-size-18);
-  
 }
 .about-text-bold {
   font-weight: 900;
@@ -353,59 +353,58 @@ h3 {
    ===================== */
 
 .form-container {
-    display:flex ;
-    justify-content: space-between;
-    align-items: flex-start;
-    text-align: left;
-    font-size: var(--font-size-18);
-    max-width: 1500px;
-    width: 100%;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  font-size: var(--font-size-18);
+  max-width: 1500px;
+  width: 100%;
 }
 .input-text {
-    border: 1px solid;
-    border-radius: 5px;
-    width: 100%;
-    padding:10px;
-    font-size: var(--font-size-16);
+  border: 1px solid;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  font-size: var(--font-size-16);
 }
 .input-text:focus {
-    outline-color: black;
+  outline-color: black;
 }
 .input-textarea {
-    height: 130px;
+  height: 130px;
 }
 .input-left {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.input-left input{
-    height: 35px;
+.input-left input {
+  height: 35px;
 }
 
-.input-left, .input-right{
-    width: 48%;
-    
+.input-left,
+.input-right {
+  width: 48%;
 }
 .input-right {
-   display: flex;
-   flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .submit-button {
-    padding: 5px 40px;
-    border-radius: 10px;
-    font-size: var(--font-size-22);
-    color: var(--color-white);
-    background-color: var(--background-color-black);
-    margin-top: 10px;
-    align-self: flex-end;
-    cursor: pointer;
+  padding: 5px 40px;
+  border-radius: 10px;
+  font-size: var(--font-size-22);
+  color: var(--color-white);
+  background-color: var(--background-color-black);
+  margin-top: 10px;
+  align-self: flex-end;
+  cursor: pointer;
 }
 .submit-button:hover {
-    background-color: var(--color-dark-shade);
+  background-color: var(--color-dark-shade);
 }
-.hidden{
+.hidden {
   display: none;
 }
 
@@ -413,53 +412,52 @@ h3 {
    Footer
    ===================== */
 
-   footer{
-    margin: 150px -20px 50px;
-    color: var(--color-black);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-   }
-   .footer-text {
-    font-size: var(--font-size-18);
-    padding: 10px;
-   }
+footer {
+  margin: 150px -20px 50px;
+  color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.footer-text {
+  font-size: var(--font-size-18);
+  padding: 10px;
+}
 
+/* tablets and phone */
 
-   /* tablets and phone */
-
-   @media screen and (max-width: 1024px) {
-    .full-name {
-      order: 2;
-    }
-    .header-navigation {
-      order: 1;
-    }
-    .menu-icon {
-      display: block;
-      margin-left: 30px;
-    }
-  
-    #menuItems {
-      display: none;
-      flex-direction: column;
-    }
-  
-    label.switch {
-    order: 3;
-    }
-    .slider .label.light {
-      left: 0px;
-      bottom: 200px;
-      position: absolute;
-    }
-    
-    .slider .label.dark {
-      left: 0px;
-      bottom: 200px;
-      position: absolute;
-      
-    }
-    
+@media screen and (max-width: 1024px) {
+  .full-name {
+    order: 2;
   }
+  .header-navigation {
+    order: 1;
+  }
+  .menu-icon {
+    display: block;
+    margin-left: 30px;
+  }
+
+  #menuItems {
+    display: none;
+    flex-direction: column;
+  }
+
+  label.switch {
+    order: 3;
+  }
+  .slider .label.light {
+    left: 0px;
+    bottom: 200px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .slider .label.dark {
+    left: 0px;
+    bottom: 200px;
+    margin-top: 20px;
+    text-align: center;
+  }
+}

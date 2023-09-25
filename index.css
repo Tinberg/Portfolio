@@ -2,6 +2,7 @@
    Global Variables
    ===================== */
 :root {
+  --font-size-12: .745rem;
   --font-size-16: 1rem;
   --font-size-18: 1.125rem;
   --font-size-22: 1.4rem;
@@ -232,6 +233,8 @@ input:checked + .slider:before {
   display: none;
 }
 
+
+
 input:checked + .slider .label.light {
   display: none;
 }
@@ -239,6 +242,8 @@ input:checked + .slider .label.light {
 input:checked + .slider .label.dark {
   display: block;
 }
+
+
 
 /* =====================
    Section1 HERO 
@@ -256,6 +261,7 @@ h1 {
 }
 .button-container {
   font-size: var(--font-size-25);
+  display: flex;
 }
 .button-container a {
   padding: 10px 50px;
@@ -453,6 +459,19 @@ footer {
     bottom: 200px;
     margin-top: 20px;
     text-align: center;
+    font-size: var(--font-size-12);
   }
 
+
+}
+
+@media screen and (max-width: 504px) {
+  .button-container {
+    font-size: var(--font-size-25);
+    flex-direction: column;
+    gap: 20px;   
+  }
+  body {
+    margin: 0;
+  }
 }

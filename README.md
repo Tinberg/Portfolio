@@ -1,13 +1,11 @@
 # Portfolio
 
-lag den responsive
-parallax scrolling/animations on scroll som AOS
 
-endre strls på bildene
-ha bildene i en macbookc?
+parallax scrolling/animations on s
 
 
-
+mediaq
 hamburger
 form
 techstack?
+toggle dark/light

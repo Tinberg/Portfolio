@@ -231,17 +231,23 @@ input:checked + .slider:before {
   transform: translateY(-50%);
   color: white;
   font-weight: bold;
+  
 }
 
 .slider .label.light {
-  left: -90px;
+  
   color: var(--background-color-black);
 }
-
 .slider .label.dark {
-  left: -90px;
+  
   display: none;
 }
+.slider .label.dark, 
+.slider .label.light {
+  left: -90px;
+  padding-top: 10px;
+}
+
 
 input:checked + .slider .label.light {
   display: none;
@@ -475,7 +481,7 @@ footer {
 }
 
 @media screen and (max-width: 504px) {
- 5
+ 
   p, h3 {
     margin: 0 10px;
   }

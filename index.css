@@ -114,6 +114,7 @@ header {
   width: 100%;
   background-color: var(--background-color-white);
   z-index: 10;
+  padding: 5px;
 }
 .full-name {
   margin: 25px 35px 15px 50px;
@@ -235,17 +236,14 @@ input:checked + .slider:before {
 }
 
 .slider .label.light {
-  
   color: var(--background-color-black);
 }
 .slider .label.dark {
-  
   display: none;
 }
 .slider .label.dark, 
 .slider .label.light {
   left: -90px;
-  padding-top: 10px;
 }
 
 

@@ -60,10 +60,17 @@ themeSwitch.addEventListener("change", function() {
 
 // hamburger menu
 document.addEventListener("DOMContentLoaded", function() {
-  const menuIcon = document.getElementById("menuIcon");
-  const menuItems = document.getElementById("menuItems");
+    const menuIcon = document.getElementById("menuIcon");
+    const menuItems = document.getElementById("menuItems");
+    const menuLinks = document.querySelectorAll('#menuItems li a');
 
-  menuIcon.addEventListener("click", function() {
-    menuItems.classList.toggle("active");
-  });
+    menuIcon.addEventListener("click", function() {
+        menuItems.classList.toggle("active");
+    });
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuItems.classList.remove('active');
+        });
+    });
 });

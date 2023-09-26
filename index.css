@@ -84,7 +84,7 @@ h1,h2 {
     var(--background-linear-gradient1)
   );
   padding: 0 20px 200px;
-  margin: 200px -20px 0;
+  margin: 150px -20px 0;
 }
 hr {
   width: 300px;
@@ -439,10 +439,11 @@ footer {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  padding: 30px;
 }
 .footer-text {
   font-size: var(--font-size-18);
-  padding: 15px;
+  
 }
 
 /* tablets and phone */

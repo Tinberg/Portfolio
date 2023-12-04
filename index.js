@@ -115,12 +115,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 formMessageElement.classList.add('success-message');
                 form.reset(); 
             } else {
-                formMessageElement.textContent = "An error occurred while sending your message. Please try again later.";
+                formMessageElement.textContent = "Something went wrong while sending your message. Please try again later.";
                 formMessageElement.classList.add('error-message');
             }
         } catch (error) {
             console.error("Error sending message:", error);
-            formMessageElement.textContent = "An error occurred while sending your message. Please try again later.";
+            formMessageElement.textContent = "Something went wrong while sending your message. Please try again later.";
             formMessageElement.classList.add('error-message');
         }
     });

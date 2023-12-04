@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (response.ok) {
                 formMessageElement.textContent = "Your message has been sent successfully!";
                 formMessageElement.classList.add('success-message');
-                form.reset(); // Optionally reset the form
+                form.reset(); 
             } else {
                 formMessageElement.textContent = "An error occurred while sending your message. Please try again later.";
                 formMessageElement.classList.add('error-message');

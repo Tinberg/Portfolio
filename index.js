@@ -74,3 +74,5 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+//Form validation 

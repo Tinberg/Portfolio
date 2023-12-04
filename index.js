@@ -55,8 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('contactForm');
 
     form.addEventListener('submit', async function(event) {
-        event.preventDefault(); // Prevent default form submission
-
+        event.preventDefault(); // Prevent default form submission behavior
         let hasError = false;
 
         // Validate Name
@@ -87,16 +86,16 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('errorMessage').textContent = '';
         }
 
-        // If validation fails, stop further execution
+        // If there are errors, stop the function
         if (hasError) {
             return;
         }
 
-        // Email Sending Logic
+        // If validation is successful, proceed with Nodemailer logic
         try {
             const response = await fetch("/.netlify/functions/sendEmail", {
                 method: "POST",
-                body: JSON.stringify({ name, email, message }),
+                body: JSON.stringify({ name, email, message, contactInfo }),
                 headers: {
                     "Content-Type": "application/json"
                 }
@@ -104,8 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (response.ok) {
                 alert("Your message has been sent successfully!");
-                // Optionally reset the form here
-                form.reset();
+                form.reset(); // Optionally reset the form
             } else {
                 alert("An error occurred while sending your message. Please try again later.");
             }

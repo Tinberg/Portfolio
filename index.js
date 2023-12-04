@@ -51,29 +51,67 @@ themeSwitch.addEventListener("change", function() {
 
 //--------Form --------//
 
-//Form validation 
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById('contactForm');
 
+    form.addEventListener('submit', async function(event) {
+        event.preventDefault(); // Prevent default form submission
 
-// nodemailer 
-document.querySelector(".form-container").addEventListener("submit", async function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-    const contactInfo = document.getElementById("contactInfo").value;
+        let hasError = false;
 
-    const response = await fetch("/.netlify/functions/sendEmail", {
-        method: "POST",
-        body: JSON.stringify({ name, email, message, contactInfo }),
-        headers: {
-            "Content-Type": "application/json"
+        // Validate Name
+        const name = document.getElementById('name').value;
+        if (name.length <= 5) {
+            document.getElementById('errorName').textContent = 'Name should be more than 5 characters.';
+            hasError = true;
+        } else {
+            document.getElementById('errorName').textContent = '';
+        }
+
+        // Validate Email
+        const email = document.getElementById('contactInfo').value;
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email)) {
+            document.getElementById('errorEmail').textContent = 'Please enter a valid email address.';
+            hasError = true;
+        } else {
+            document.getElementById('errorEmail').textContent = '';
+        }
+
+        // Validate Message
+        const message = document.getElementById('message').value;
+        if (message.length <= 10) {
+            document.getElementById('errorMessage').textContent = 'Your message should be more than 10 characters.';
+            hasError = true;
+        } else {
+            document.getElementById('errorMessage').textContent = '';
+        }
+
+        // If validation fails, stop further execution
+        if (hasError) {
+            return;
+        }
+
+        // Email Sending Logic
+        try {
+            const response = await fetch("/.netlify/functions/sendEmail", {
+                method: "POST",
+                body: JSON.stringify({ name, email, message }),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+
+            if (response.ok) {
+                alert("Your message has been sent successfully!");
+                // Optionally reset the form here
+                form.reset();
+            } else {
+                alert("An error occurred while sending your message. Please try again later.");
+            }
+        } catch (error) {
+            console.error("Error sending message:", error);
+            alert("An error occurred while sending your message. Please try again later.");
         }
     });
-
-    if (response.ok) {
-        alert("Your message has been sent successfully!");
-    } else {
-        alert("An error occurred while sending your message. Please try again later.");
-    }
 });

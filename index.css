@@ -13,6 +13,7 @@
   --color-gray37: #5e5e5e;
   --color-black: black;
   --color-white: white;
+  --color-red: red;
   --color-dark-shade: #2c3e50;
   --background-color-light-gray: #e0e0e0;
   --background-color-white: white;
@@ -20,6 +21,7 @@
   --background-linear-gradient1: #f7f9fa;
   --background-linear-gradient2: #e5ebed;
 }
+/*Dark theme */
 [data-theme="dark"] {
   --color-black: #ffffff;
   --background-color-white: #000000;
@@ -396,6 +398,7 @@ h3 {
 }
 .input-textarea {
   height: 130px;
+  margin-bottom: 10px;
 }
 .input-left {
   display: flex;
@@ -429,6 +432,9 @@ h3 {
 }
 .hidden {
   display: none;
+}
+.error-message {
+  color: var(--color-red);
 }
 
 /* =====================

@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
             if (response.ok) {
-                formMessageElement.textContent = "Your message has been sent successfully!";
+                formMessageElement.textContent = "Thank you for your message! I'll get back to you as soon as possible.";
                 formMessageElement.classList.remove('error-message');
                 formMessageElement.classList.add('success-message');
                 form.reset(); 

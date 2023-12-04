@@ -51,11 +51,14 @@ themeSwitch.addEventListener("change", function() {
 
 //--------Form --------//
 
+// Validation and nodmailer serverless function to send email. 
 document.addEventListener("DOMContentLoaded", function() {
+
     const form = document.getElementById('contactForm');
+    const formMessageElement = document.getElementById('formMessage');
 
     form.addEventListener('submit', async function(event) {
-        event.preventDefault(); // Prevent default form submission behavior
+        event.preventDefault();
         let hasError = false;
 
         // Validate Name
@@ -88,10 +91,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // If there are errors, stop the function
         if (hasError) {
+            formMessageElement.textContent = 'Please correct the errors before submitting.';
+            formMessageElement.classList.add('error-message');
             return;
         }
 
-        // If validation is successful, proceed with Nodemailer logic
+        //  Nodemailer logic
         try {
             const response = await fetch("/.netlify/functions/sendEmail", {
                 method: "POST",
@@ -102,14 +107,17 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
             if (response.ok) {
-                alert("Your message has been sent successfully!");
+                formMessageElement.textContent = "Your message has been sent successfully!";
+                formMessageElement.classList.add('success-message');
                 form.reset(); // Optionally reset the form
             } else {
-                alert("An error occurred while sending your message. Please try again later.");
+                formMessageElement.textContent = "An error occurred while sending your message. Please try again later.";
+                formMessageElement.classList.add('error-message');
             }
         } catch (error) {
             console.error("Error sending message:", error);
-            alert("An error occurred while sending your message. Please try again later.");
+            formMessageElement.textContent = "An error occurred while sending your message. Please try again later.";
+            formMessageElement.classList.add('error-message');
         }
     });
 });

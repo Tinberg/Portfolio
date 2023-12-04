@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         formMessageElement.classList.remove('error-message', 'success-message');
         formMessageElement.textContent = '';
-
+        
         // Validate Name
         const name = document.getElementById('name').value;
         if (name.length <= 5) {
@@ -95,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function() {
         // If there are errors, stop the function
         if (hasError) {
             formMessageElement.textContent = 'Please correct the errors before submitting.';
-            formMessageElement.classList.remove('error-message');
             formMessageElement.classList.add('error-message');
             return;
         }
@@ -112,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (response.ok) {
                 formMessageElement.textContent = "Your message has been sent successfully!";
+                formMessageElement.classList.remove('error-message');
                 formMessageElement.classList.add('success-message');
                 form.reset(); 
             } else {

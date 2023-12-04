@@ -3,9 +3,5 @@
 
 parallax scrolling/animations on s
 
-
-mediaq
-
-form
-techstack?
+DRY CSS
 

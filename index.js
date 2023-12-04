@@ -61,6 +61,9 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
         let hasError = false;
 
+        formMessageElement.classList.remove('error-message', 'success-message');
+        formMessageElement.textContent = '';
+        
         // Validate Name
         const name = document.getElementById('name').value;
         if (name.length <= 5) {

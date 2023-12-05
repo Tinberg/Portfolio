@@ -122,6 +122,7 @@ hr {
   background-color: var(--background-color-light-gray);
   border-radius: 10px;
   font-size: var(--font-size-18);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* Flexbox */
@@ -352,6 +353,7 @@ input:checked + .slider .label.dark {
 }
 .project-text-container {
   flex-grow: 1;
+  max-height: 270px;
 }
 .project-text {
   text-align: left;
@@ -460,6 +462,12 @@ footer {
 /* tablets and phone */
 
 @media screen and (max-width: 1024px) {
+  p {
+    margin: 0 10px;
+  }
+  h3 {
+    margin: 25px 10px;
+  }
   .full-name {
     order: 2;
     margin: 25px 0 0 20px;
@@ -495,10 +503,7 @@ footer {
   h2 {
     margin-top: 100px;
   }
-  p,
-  h3 {
-    margin: 0 10px;
-  }
+  
   .full-name {
     font-size: var(--font-size-22);
     text-align: center;
@@ -513,6 +518,9 @@ footer {
   .project-card img {
     width: 100vw;
     min-width: auto;
+  }
+  .project-text-container {
+    max-height: none;
   }
   .section-background {
     padding: 0 0 150px;

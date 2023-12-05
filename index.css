@@ -5,7 +5,7 @@
   --font-size-12: 0.745rem;
   --font-size-16: 1rem;
   --font-size-18: 1.125rem;
-  --font-size-20: 1.250rem;
+  --font-size-20: 1.25rem;
   --font-size-22: 1.4rem;
   --font-size-25: 1.6rem;
   --font-size-30: 1.875rem;
@@ -32,6 +32,7 @@
   --background-color-light-gray: #2c3e50;
   --background-color-black: #5e5e5e;
 }
+
 /* =====================
    Base/Reset Styles
    ===================== */
@@ -52,7 +53,7 @@ html {
   color: var(--color-black);
 }
 body {
-  margin-right:20px ;
+  margin-right: 20px;
   color: var(--color-black);
   background-color: var(--background-color-white);
 }
@@ -64,17 +65,16 @@ a {
 /* =====================
    Utility/Helper Styles
    ===================== */
-   .content-wrapper {
-    margin-right: -20px;
-    overflow-x: hidden;
-   }
+.content-wrapper {
+  margin-right: -20px;
+  overflow-x: hidden;
+}
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin: 0px 20px 0 20px;
-  
 }
 h1 {
   margin-top: 200px;
@@ -121,7 +121,7 @@ header {
   width: 100%;
   background-color: var(--background-color-white);
   z-index: 10;
-  padding-bottom:15px;
+  padding-bottom: 15px;
 }
 .full-name {
   margin: 25px 35px 15px 50px;
@@ -169,8 +169,8 @@ header {
   text-align: center;
   background-color: var(--background-color-white);
 }
-#menuItems.active li{
-  margin: 20px 0  ;
+#menuItems.active li {
+  margin: 20px 0;
 }
 .bar {
   width: 30px;
@@ -239,7 +239,6 @@ input:checked + .slider:before {
   transform: translateY(-50%);
   color: white;
   font-weight: bold;
-  
 }
 
 .slider .label.light {
@@ -248,11 +247,10 @@ input:checked + .slider:before {
 .slider .label.dark {
   display: none;
 }
-.slider .label.dark, 
+.slider .label.dark,
 .slider .label.light {
   left: -90px;
 }
-
 
 input:checked + .slider .label.light {
   display: none;
@@ -316,7 +314,6 @@ h3 {
   font-size: var(--font-size-18);
   text-align: left;
   width: 95%;
-
 }
 .about-text-bold {
   font-weight: 900;
@@ -332,9 +329,9 @@ h3 {
 .project-card {
   flex: 1;
   max-width: 700px;
-  display: flex; 
-  flex-direction: column; 
-  justify-content: space-between; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .project-card img {
   width: 100%;
@@ -352,16 +349,16 @@ h3 {
   font-size: var(--font-size-22);
 }
 .project-text-container {
-  flex-grow: 1; 
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 .project-text {
   text-align: left;
   margin-bottom: 10px;
   font-size: var(--font-size-18);
-  min-height: 150px; 
+  min-height: 150px;
 }
 .github-live-link {
   display: flex;
@@ -448,7 +445,7 @@ h3 {
   color: var(--color-red);
 }
 .success-message {
-color: var(--color-green);
+  color: var(--color-green);
 }
 .form-message {
   font-size: var(--font-size-20);
@@ -469,13 +466,11 @@ footer {
 }
 .footer-text {
   font-size: var(--font-size-18);
-  
 }
 
 /* tablets and phone */
 
 @media screen and (max-width: 1024px) {
- 
   .full-name {
     order: 2;
     margin: 25px 0 0 20px;
@@ -512,7 +507,8 @@ footer {
   h2 {
     margin-top: 100px;
   }
-  p, h3 {
+  p,
+  h3 {
     margin: 0 10px;
   }
   .full-name {
@@ -550,7 +546,7 @@ footer {
     gap: 10px;
   }
   .submit-button {
-    align-self:auto
+    align-self: auto;
   }
   .input-right {
     gap: 10px;

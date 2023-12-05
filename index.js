@@ -66,6 +66,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const serverEmail = document.getElementById("email").value; // Email for serverless function
     const message = document.getElementById("message").value;
 
+    console.log(`Name: ${name}, User Email: ${user_email}, Server Email: ${serverEmail}, Message: ${message}`);
+
+
     // Validate Name
     if (name.length <= 5) {
       document.getElementById("errorName").textContent = "Name should be more than 5 characters.";

@@ -22,7 +22,7 @@
     <script src="index.js" defer></script>
   </head>
   <body>
-    <header>
+    <header class="flex space-between">
       <div class="full-name">Mathias Tinberg</div>
       <nav class="header-navigation">
         <div class="menu-icon" id="menuIcon">
@@ -30,16 +30,16 @@
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
-        <ul id="menuItems">
+        <ul class="flex" id="menuItems">
           <li><a href="#hero-section">Home</a></li>
           <li><a href="#about-section">About</a></li>
           <li><a href="#projects-section">Projects</a></li>
           <li class="corner-li"><a href="#contact-section">Contact</a></li>
         </ul>
       </nav>
-      <label class="switch">
+      <label class="switch flex">
         <input type="checkbox" id="themeSwitch" />
-        <span class="slider round">
+        <span class="slider round text-center">
           <span class="label dark">Light theme</span>
           <span class="label light">Dark theme</span>
         </span>
@@ -55,7 +55,7 @@
             Passionate Frontend Web Developer Student | Crafting User-Centric
             Experiences
           </p>
-          <div class="button-container">
+          <div class="button-container flex">
             <a href="#projects-section" class="project-button">Projects</a>
             <a href="#contact-section" class="contact-button">Contact</a>
           </div>
@@ -109,13 +109,13 @@
         <section id="projects-section">
           <h2>Projects</h2>
           <hr />
-          <p class="project-text-header">
+          <p class="project-text-header ">
             Here you will find some of the personal projects that I created with
             each project containing a Github and live link.
           </p>
-          <div class="project-container">
+          <div class="project-container flex center">
             <!--Community science museum-->
-            <div class="project-card">
+            <div class="project-card flex-column space-between">
               <img
                 src="/images/Community_science_museum.jpg"
                 alt="Image of front page of community science museum project"
@@ -136,7 +136,7 @@
                   <li>Figma</li>
                   <li>Midjourney</li>
                 </ul>
-                <ul class="github-live-link">
+                <ul class="github-live-link flex">
                   <li>
                     <a
                       href="https://github.com/Tinberg/Semester-Project-1"
@@ -159,7 +159,7 @@
               </div>
             </div>
             <!--Rainydays-->
-            <div class="project-card">
+            <div class="project-card flex-column space-between">
               <img
                 src="/images/Rainydays_updated.jpg"
                 alt="Image of front page of Rainydays project"
@@ -180,7 +180,7 @@
                   <li>WordPress</li>
                   <li>Midjourney</li>
                 </ul>
-                <ul class="github-live-link">
+                <ul class="github-live-link flex">
                   <li>
                     <a
                       href="https://github.com/Tinberg/Rainydays"
@@ -203,7 +203,7 @@
               </div>
             </div>
             <!--James Cooks-->
-            <div class="project-card">
+            <div class="project-card flex-column space-between">
               <img
                 src="/images/JamesCooks_updated.jpg"
                 alt="Image of blog posts page James Cooks project"
@@ -227,7 +227,7 @@
                   <li>WordPress</li>
                   <li>Midjourney</li>
                 </ul>
-                <ul class="github-live-link">
+                <ul class="github-live-link flex">
                   <li>
                     <a
                       href="https://github.com/Tinberg/James-Smith-food-blog-"
@@ -256,12 +256,12 @@
           <h2>Contact</h2>
           <hr />
           <form
-            class="form-container"
+            class="form-container flex space-between"
             id="contactForm"
             action="/.netlify/functions/sendEmail"
             method="POST"
           >
-            <div class="input-left">
+            <div class="input-left flex-column">
               <label for="name">Name</label>
               <input
                 type="text"
@@ -292,7 +292,7 @@
                 readonly
               />
             </div>
-            <div class="input-right">
+            <div class="input-right flex-column">
               <label for="message">Your message</label>
               <textarea
                 id="message"
@@ -307,7 +307,7 @@
           <p class="form-message" id="formMessage"></p>
           <div>
             <h3>Contact me on:</h3>
-            <ul class="contact-links">
+            <ul class="contact-links flex center">
               <li>
                 <a
                   href="https://github.com/Tinberg/"
@@ -330,7 +330,7 @@
           </div>
         </section>
       </main>
-      <footer>
+      <footer class="flex-column center text-center">
         <p class="footer-text">
           I'm on a journey to craft remarkable web experiences and make a
           positive impact in the world of web development. Thanks for visiting

@@ -61,6 +61,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  cursor:pointer;
 }
 /* =====================
    Utility/Helper Styles
@@ -89,10 +90,11 @@ h3 {
   margin: 25px 0 25px 0;
   text-align: left;
 }
-h1, h2, h3 {
-  font-family: montserrat;
+h1,
+h2,
+h3 {
+  font-family: Montserrat, Arial, sans-serif;
 }
-
 .section-background {
   background: linear-gradient(
     to right,
@@ -110,6 +112,7 @@ hr {
   margin: 40px auto;
 }
 
+/*For section 2 and 4*/
 .tech-stack-container {
   display: flex;
 }
@@ -121,10 +124,27 @@ hr {
   font-size: var(--font-size-18);
 }
 
+/* Flexbox */
+.flex {
+  display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+.center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
 /* Header */
 header {
-  display: flex;
-  justify-content: space-between;
   font-weight: var(--font-weight-bold);
   position: fixed;
   top: 0;
@@ -137,11 +157,6 @@ header {
   margin: 25px 35px 15px 50px;
   font-size: var(--font-size-25);
 }
-
-.header-navigation ul {
-  display: flex;
-}
-
 .header-navigation li {
   margin: 30px 5px 10px;
 }
@@ -152,7 +167,6 @@ header {
 }
 .header-navigation a:hover {
   background-color: var(--background-color-light-gray);
-  cursor: pointer;
 }
 .header-navigation .corner-li {
   margin-right: 80px;
@@ -166,11 +180,11 @@ header {
   background-color: var(--color-dark-shade);
 }
 /* hambruger menu */
-
 .menu-icon {
   display: none;
+  margin: 20px 25px 0;
+  padding: 5px;
   cursor: pointer;
-  margin: 30px 25px 0;
 }
 #menuItems.active {
   display: flex;
@@ -193,7 +207,6 @@ header {
 /* Switch styles */
 .switch {
   position: relative;
-  display: flex;
   width: 60px;
   height: 34px;
   margin: 25px;
@@ -273,7 +286,6 @@ input:checked + .slider .label.dark {
    Section1 HERO 
    ===================== */
 
-
 .hero-about-paragraph {
   margin-bottom: 60px;
   max-width: 1500px;
@@ -283,7 +295,6 @@ input:checked + .slider .label.dark {
 }
 .button-container {
   font-size: var(--font-size-25);
-  display: flex;
 }
 .button-container a {
   padding: 10px 50px;
@@ -291,9 +302,7 @@ input:checked + .slider .label.dark {
   border: 2px solid;
   border-radius: 20px;
 }
-.button-container a:hover {
-  cursor: pointer;
-}
+
 .contact-button {
   background: var(--background-color-black);
   color: var(--color-white);
@@ -320,17 +329,12 @@ input:checked + .slider .label.dark {
   text-decoration-thickness: 1px;
 }
 .project-container {
-  display: flex;
   flex-wrap: wrap;
   gap: 100px;
-  justify-content: center;
 }
 .project-card {
   flex: 1;
   max-width: 700px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 .project-card img {
   width: 100%;
@@ -343,24 +347,17 @@ input:checked + .slider .label.dark {
   width: 100%;
 }
 .project-text-header {
-  text-align: center;
   margin-bottom: 50px;
   font-size: var(--font-size-22);
 }
 .project-text-container {
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 .project-text {
   text-align: left;
   margin-bottom: 10px;
   font-size: var(--font-size-18);
   min-height: 150px;
-}
-.github-live-link {
-  display: flex;
 }
 .github-live-link li {
   margin: 5px;
@@ -378,7 +375,6 @@ input:checked + .slider .label.dark {
 .fa-paperclip:hover,
 .fa-linkedin:hover {
   transform: scale(1.2);
-  cursor: pointer;
   color: var(--color-dark-shade);
 }
 
@@ -387,8 +383,6 @@ input:checked + .slider .label.dark {
    ===================== */
 
 .form-container {
-  display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   text-align: left;
   font-size: var(--font-size-18);
@@ -410,8 +404,6 @@ input:checked + .slider .label.dark {
   margin-bottom: 10px;
 }
 .input-left {
-  display: flex;
-  flex-direction: column;
   gap: 10px;
 }
 .input-left input {
@@ -421,10 +413,6 @@ input:checked + .slider .label.dark {
 .input-left,
 .input-right {
   width: 48%;
-}
-.input-right {
-  display: flex;
-  flex-direction: column;
 }
 .submit-button {
   padding: 5px 40px;
@@ -451,10 +439,8 @@ input:checked + .slider .label.dark {
 .form-message {
   font-size: var(--font-size-20);
 }
-.contact-links{
-  display: flex;
+.contact-links {
   align-items: center;
-  justify-content: center;
 }
 
 /* =====================
@@ -464,10 +450,7 @@ input:checked + .slider .label.dark {
 footer {
   margin: 100px -20px 50px;
   color: var(--color-black);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  
   padding: 30px;
 }
 .footer-text {
@@ -501,7 +484,6 @@ footer {
     left: 0px;
     bottom: 200px;
     margin-top: 20px;
-    text-align: center;
     font-size: var(--font-size-12);
   }
 }

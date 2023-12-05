@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       const response = await fetch("/.netlify/functions/sendEmail", {
         method: "POST",
-        body: JSON.stringify({ name, email, message, contactInfo }),
+        body: JSON.stringify({ name, email: contactInfo, message }),
         headers: {
           "Content-Type": "application/json",
         },

@@ -78,9 +78,19 @@ section {
 }
 h1 {
   margin-top: 200px;
+  font-size: var(--font-size-45);
 }
 h2 {
   margin-top: 150px;
+  font-size: var(--font-size-30);
+}
+h3 {
+  font-size: var(--font-size-22);
+  margin: 25px 0 25px 0;
+  text-align: left;
+}
+h1, h2, h3 {
+  font-family: montserrat;
 }
 
 .section-background {
@@ -238,7 +248,6 @@ input:checked + .slider:before {
   top: 50%;
   transform: translateY(-50%);
   color: white;
-  font-weight: bold;
 }
 
 .slider .label.light {
@@ -264,9 +273,7 @@ input:checked + .slider .label.dark {
    Section1 HERO 
    ===================== */
 
-h1 {
-  font-size: var(--font-size-45);
-}
+
 .hero-about-paragraph {
   margin-bottom: 60px;
   max-width: 1500px;
@@ -302,21 +309,13 @@ h1 {
    Section2 and Section3
    ===================== */
 
-h2 {
-  font-size: var(--font-size-30);
-}
-h3 {
-  font-size: var(--font-size-22);
-  margin: 25px 0 25px 0;
-  text-align: left;
-}
 .about-paragraph {
   font-size: var(--font-size-18);
   text-align: left;
   width: 95%;
 }
 .about-text-bold {
-  font-weight: 900;
+  font-weight: var(--font-weight-bold);
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }

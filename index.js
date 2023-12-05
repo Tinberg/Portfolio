@@ -69,7 +69,17 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("errorName").textContent = "";
     }
 
-  
+    // Validate Email
+    const email = document.getElementById("contactInfo").value;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(email)) {
+      document.getElementById("errorEmail").textContent =
+        "Please enter a valid email address.";
+      hasError = true;
+    } else {
+      document.getElementById("errorEmail").textContent = "";
+    }
+
     // Validate Message
     const message = document.getElementById("message").value;
     if (message.length <= 10) {

@@ -107,8 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
         method: "POST",
         body: JSON.stringify({
           name, 
-          email: serverEmail, // Email for serverless function
-          user_email, // User's email address
+          user_email: serverEmail, // Email for serverless function
+          email, // User's email address
           message 
         }),
         headers: {

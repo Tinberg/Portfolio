@@ -441,6 +441,11 @@ input:checked + .slider .label.dark {
 .form-message {
   font-size: var(--font-size-20);
 }
+.error-message,
+.success-message,
+.form-message {
+  padding: 10px 0;
+}
 .contact-links {
   align-items: center;
 }
@@ -468,22 +473,17 @@ footer {
   h3 {
     margin: 25px 10px;
   }
-  .full-name {
-    order: 2;
-    margin: 25px 0 0 20px;
-  }
+  /*Header*/
   .header-navigation {
     order: 1;
   }
   .menu-icon {
     display: block;
   }
-
   #menuItems {
     display: none;
     flex-direction: column;
   }
-
   label.switch {
     order: 3;
   }
@@ -494,6 +494,11 @@ footer {
     margin-top: 20px;
     font-size: var(--font-size-12);
   }
+  /*Section 1*/
+  .full-name {
+    order: 2;
+    margin: 25px 0 0 20px;
+  }
 }
 
 @media screen and (max-width: 504px) {
@@ -503,18 +508,25 @@ footer {
   h2 {
     margin-top: 100px;
   }
-  
+  .tech-stack-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .section-background {
+    padding: 0 0 150px;
+    margin: 150px 0 0;
+  }
+  /*Section 1*/
   .full-name {
     font-size: var(--font-size-22);
     text-align: center;
   }
-
   .button-container {
     font-size: var(--font-size-25);
     flex-direction: column;
     gap: 20px;
   }
-
+  /*Section 3*/
   .project-card img {
     width: 100vw;
     min-width: auto;
@@ -522,19 +534,10 @@ footer {
   .project-text-container {
     max-height: none;
   }
-  .section-background {
-    padding: 0 0 150px;
-    margin: 150px 0 0;
-  }
-
-  .tech-stack-container {
-    flex-direction: column;
-    width: 100%;
-  }
   .tech-stack-container li {
     text-align: center;
   }
-
+  /*Section 4*/
   .form-container {
     flex-direction: column;
     align-items: center;
@@ -547,7 +550,7 @@ footer {
   .input-right {
     gap: 10px;
   }
-
+  /*Footer*/
   footer {
     margin: 50px 0;
   }

@@ -21,7 +21,7 @@ exports.handler = async function(event, context) {
         from: senderEmail,
         to: senderEmail, 
         subject: `Message from ${name}`,
-        text:`message:${message}\nEmail from: ${contactInfo}`
+        text: `message: ${message}\nEmail from: ${email}` 
         
     };
 

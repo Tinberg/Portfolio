@@ -56,35 +56,36 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
     let hasError = false;
 
+    // Clear existing messages and classes
+    formMessageElement.textContent = '';
     formMessageElement.classList.remove("error-message", "success-message");
-    formMessageElement.textContent = "";
+
+    // Retrieve values from form
+    const name = document.getElementById("name").value;
+    const user_email = document.getElementById("contactInfo").value; // User's email
+    const serverEmail = document.getElementById("email").value; // Email for serverless function
+    const message = document.getElementById("message").value;
 
     // Validate Name
-    const name = document.getElementById("name").value;
     if (name.length <= 5) {
-      document.getElementById("errorName").textContent =
-        "Name should be more than 5 characters.";
+      document.getElementById("errorName").textContent = "Name should be more than 5 characters.";
       hasError = true;
     } else {
       document.getElementById("errorName").textContent = "";
     }
 
     // Validate Email
-    const email = document.getElementById("contactInfo").value;
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailPattern.test(email)) {
-      document.getElementById("errorEmail").textContent =
-        "Please enter a valid email address.";
+    if (!emailPattern.test(user_email)) {
+      document.getElementById("errorEmail").textContent = "Please enter a valid email address.";
       hasError = true;
     } else {
       document.getElementById("errorEmail").textContent = "";
     }
 
     // Validate Message
-    const message = document.getElementById("message").value;
     if (message.length <= 10) {
-      document.getElementById("errorMessage").textContent =
-        "Your message should be more than 10 characters.";
+      document.getElementById("errorMessage").textContent = "Your message should be more than 10 characters.";
       hasError = true;
     } else {
       document.getElementById("errorMessage").textContent = "";
@@ -92,38 +93,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // If there are errors, stop the function
     if (hasError) {
-      formMessageElement.textContent =
-        "Please correct the errors before submitting.";
+      formMessageElement.textContent = "Please correct the errors before submitting.";
       formMessageElement.classList.add("error-message");
       return;
     }
 
-    //  Nodemailer logic
+    // Nodemailer logic
     try {
       const response = await fetch("/.netlify/functions/sendEmail", {
         method: "POST",
-        body: JSON.stringify({ name, email, message, contactInfo }),
+        body: JSON.stringify({
+          name, 
+          serverEmail, // Email for serverless function
+          user_email, // User's email address
+          message 
+        }),
         headers: {
           "Content-Type": "application/json",
         },
       });
 
       if (response.ok) {
-        formMessageElement.textContent =
-          "Thank you for your message! I'll get back to you as soon as possible.";
+        formMessageElement.textContent = "Thank you for your message! I'll get back to you as soon as possible.";
         formMessageElement.classList.remove("error-message");
         formMessageElement.classList.add("success-message");
         form.reset();
       } else {
-        formMessageElement.textContent =
-          "Something went wrong while sending your message. Please try again later.";
+        formMessageElement.textContent = "Something went wrong while sending your message. Please try again later.";
         formMessageElement.classList.add("error-message");
       }
     } catch (error) {
       console.error("Error sending message:", error);
-      formMessageElement.textContent =
-        "Something went wrong while sending your message. Please try again later.";
+      formMessageElement.textContent = "Something went wrong while sending your message. Please try again later.";
       formMessageElement.classList.add("error-message");
     }
   });
 });
+

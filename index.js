@@ -21,32 +21,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //--------dark/light mode--------//
 document.addEventListener("DOMContentLoaded", function() {
-    
+    const themeSwitch = document.getElementById("themeSwitch");
+    let currentTheme = localStorage.getItem('theme');
 
-const themeSwitch = document.getElementById("themeSwitch");
-const currentTheme = localStorage.getItem('theme');
+    // If no theme is stored, set it to dark
+    if (!currentTheme) {
+        currentTheme = 'dark';
+        localStorage.setItem('theme', currentTheme);
+    }
 
-if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
+    themeSwitch.checked = (currentTheme === 'dark');
 
-    
-    if (currentTheme === 'dark') {
-        themeSwitch.checked = true;
-    }
-}
+    themeSwitch.addEventListener("change", function() {
+        if (themeSwitch.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
 
-themeSwitch.addEventListener("change", function() {
-    if (themeSwitch.checked) {
-        
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    } else {
-       
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    }
-});
-});
 
 
 //--------Form --------//

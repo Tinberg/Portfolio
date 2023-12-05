@@ -367,7 +367,8 @@ h3 {
   margin: 5px;
 }
 .fa-github,
-.fa-paperclip {
+.fa-paperclip,
+.fa-linkedin {
   padding: 10px;
   font-size: 35px;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out,
@@ -375,7 +376,8 @@ h3 {
 }
 
 .fa-github:hover,
-.fa-paperclip:hover {
+.fa-paperclip:hover,
+.fa-linkedin:hover {
   transform: scale(1.2);
   cursor: pointer;
   color: var(--color-dark-shade);
@@ -449,6 +451,11 @@ h3 {
 }
 .form-message {
   font-size: var(--font-size-20);
+}
+.contact-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* =====================

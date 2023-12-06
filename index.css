@@ -1,6 +1,10 @@
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* =====================
@@ -31,13 +35,17 @@
 
 /*Dark theme */
 [data-theme="dark"] {
-  --color-black: #ffffff;/*white for dark theme*/
-  --background-color-white: #000000;/*Black for dark theme*/
+  --color-black: #ffffff; /*white for dark theme*/
+  --background-color-white: #000000; /*Black for dark theme*/
   --background-linear-gradient1: #121212;
   --background-linear-gradient2: #1c1c1c;
   --background-color-light-gray: #2c3e50;
   --background-color-black: #5e5e5e;
 }
+/*Remove background img dark theme*/
+/* [data-theme="dark"] .section-background-img {
+  background-image: none; 
+} */
 
 /* =====================
    Base/Reset Styles
@@ -56,18 +64,18 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  color: var(--color-black);/*White for dark theme*/
+  color: var(--color-black); /*White for dark theme*/
 }
 body {
   margin-right: 20px;
-  color: var(--color-black);/*White for dark theme*/
-  background-color: var(--background-color-white);/*Black for dark theme*/
+  color: var(--color-black); /*White for dark theme*/
+  background-color: var(--background-color-white); /*Black for dark theme*/
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  cursor:pointer;
+  cursor: pointer;
 }
 /* =====================
    Utility/Helper Styles
@@ -101,6 +109,11 @@ h2,
 h3 {
   font-family: Montserrat, Arial, sans-serif;
 }
+.section-background-img {
+  background-image: url(/images/background_image.png);
+  padding-bottom: 150px;
+}
+
 .section-background {
   background: linear-gradient(
     to right,
@@ -109,7 +122,7 @@ h3 {
     var(--background-linear-gradient1)
   );
   padding: 0 20px 200px;
-  margin: 150px -20px 0;
+  margin: 0 -20px;
 }
 hr {
   width: 300px;
@@ -155,7 +168,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--background-color-white);/*Black for dark theme*/
+  background-color: var(--background-color-white); /*Black for dark theme*/
   z-index: 10;
   padding-bottom: 15px;
 }
@@ -197,7 +210,7 @@ header {
   position: absolute;
   width: 100%;
   text-align: center;
-  background-color: var(--background-color-white);/*Black for dar theme*/
+  background-color: var(--background-color-white); /*Black for dar theme*/
 }
 #menuItems.active li {
   margin: 20px 0;
@@ -205,7 +218,7 @@ header {
 .bar {
   width: 30px;
   height: 3px;
-  background-color: var(--color-black);/*White for dark theme*/
+  background-color: var(--color-black); /*White for dark theme*/
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -475,8 +488,8 @@ input:checked + .slider .label.dark {
 
 footer {
   margin: 100px -20px 50px;
-  color: var(--color-black);/*White for dark theme*/
-  
+  color: var(--color-black); /*White for dark theme*/
+
   padding: 30px;
 }
 .footer-text {

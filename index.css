@@ -23,10 +23,11 @@
   --background-linear-gradient1: #f7f9fa;
   --background-linear-gradient2: #e5ebed;
 }
+
 /*Dark theme */
 [data-theme="dark"] {
-  --color-black: #ffffff;
-  --background-color-white: #000000;
+  --color-black: #ffffff;/*white for dark theme*/
+  --background-color-white: #000000;/*Black for dark theme*/
   --background-linear-gradient1: #121212;
   --background-linear-gradient2: #1c1c1c;
   --background-color-light-gray: #2c3e50;
@@ -50,12 +51,12 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  color: var(--color-black);
+  color: var(--color-black);/*White for dark theme*/
 }
 body {
   margin-right: 20px;
-  color: var(--color-black);
-  background-color: var(--background-color-white);
+  color: var(--color-black);/*White for dark theme*/
+  background-color: var(--background-color-white);/*Black for dark theme*/
 }
 
 a {
@@ -122,7 +123,6 @@ hr {
   background-color: var(--background-color-light-gray);
   border-radius: 10px;
   font-size: var(--font-size-18);
-  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* Flexbox */
@@ -150,7 +150,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--background-color-white);
+  background-color: var(--background-color-white);/*Black for dark theme*/
   z-index: 10;
   padding-bottom: 15px;
 }
@@ -192,7 +192,7 @@ header {
   position: absolute;
   width: 100%;
   text-align: center;
-  background-color: var(--background-color-white);
+  background-color: var(--background-color-white);/*Black for dar theme*/
 }
 #menuItems.active li {
   margin: 20px 0;
@@ -200,7 +200,7 @@ header {
 .bar {
   width: 30px;
   height: 3px;
-  background-color: var(--color-black);
+  background-color: var(--color-black);/*White for dark theme*/
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -391,6 +391,9 @@ input:checked + .slider .label.dark {
   max-width: 1500px;
   width: 90%;
 }
+.your-message {
+  margin-bottom: 8px;
+}
 .input-text {
   border: 1px solid;
   border-radius: 5px;
@@ -456,7 +459,7 @@ input:checked + .slider .label.dark {
 
 footer {
   margin: 100px -20px 50px;
-  color: var(--color-black);
+  color: var(--color-black);/*White for dark theme*/
   
   padding: 30px;
 }

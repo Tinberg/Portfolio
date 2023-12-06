@@ -127,3 +127,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+ 
+//Scroll reveal
+  ScrollReveal().reveal('.project-card img, .project-text, .project-h3, h1,h2,h3,p', {
+    origin: 'top', 
+    distance: '40px',
+    easing: 'ease-in',
+    interval: 200,
+    beforeReveal: function (el) {
+      el.style.transform = 'translateY(0)';
+      el.style.transition = 'transform 0.5s ease';
+    }
+  });

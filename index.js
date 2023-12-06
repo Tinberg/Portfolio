@@ -130,13 +130,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
  
 //Scroll reveal
-  ScrollReveal().reveal('.project-card img, .project-text, .project-h3, h1,h2,h3,p', {
-    origin: 'top', 
-    distance: '40px',
-    easing: 'ease-in',
-    interval: 200,
-    beforeReveal: function (el) {
-      el.style.transform = 'translateY(0)';
-      el.style.transition = 'transform 0.5s ease';
-    }
-  });
+// For h1, h2, h3, and p elements
+ScrollReveal().reveal('h1, h2, h3, p, .button-container a, .contact-links a, .about-tech-stack ', {
+  origin: 'top', 
+  distance: '40px',
+  easing: 'ease-in',
+  interval: 200, // Set the interval to 200 for these elements
+  beforeReveal: function (el) {
+    el.style.transform = 'translateY(0)';
+    el.style.transition = 'transform 0.5s ease';
+  }
+});
+
+// For project-card img, project-text, and project-h3 elements
+ScrollReveal().reveal('.project-card img, .project-text, .project-h3', {
+  origin: 'top', 
+  distance: '40px',
+  easing: 'ease-in',
+  interval: 100, // Set the interval to 100 for these elements to sync with li
+  beforeReveal: function (el) {
+    el.style.transform = 'translateY(0)';
+    el.style.transition = 'transform 0.5s ease';
+  }
+});
+
+// For li elements
+ScrollReveal().reveal('li', {
+  origin: 'top', 
+  distance: '40px',
+  easing: 'ease-in',
+  interval: 100, // Set the interval to 100 for li elements
+  beforeReveal: function (el) {
+    el.style.transform = 'translateY(0)';
+    el.style.transition = 'transform 0.5s ease';
+  }
+});

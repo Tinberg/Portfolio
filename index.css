@@ -307,7 +307,8 @@ input:checked + .slider .label.dark {
 
 .hero-about-paragraph {
   margin-bottom: 60px;
-  max-width: 1500px;
+  max-width: 1800px;
+  line-height: 1.5;
 }
 .hero-paragraph {
   font-size: var(--font-size-22);
@@ -321,7 +322,6 @@ input:checked + .slider .label.dark {
   border: 2px solid;
   border-radius: 20px;
 }
-
 .contact-button {
   background: var(--background-color-black);
   color: var(--color-white);
@@ -340,7 +340,7 @@ input:checked + .slider .label.dark {
 .about-paragraph {
   font-size: var(--font-size-18);
   text-align: left;
-  width: 95%;
+  width: 90%;
 }
 .about-text-bold {
   font-weight: var(--font-weight-bold);

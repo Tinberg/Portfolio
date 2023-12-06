@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
       formMessageElement.textContent =
         "Please correct the errors before submitting.";
       formMessageElement.classList.add("error-message");
+      spinLoader.style.display = "none";
       return;
     }
 

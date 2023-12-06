@@ -59,6 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
     formMessageElement.classList.remove("error-message", "success-message");
     formMessageElement.textContent = "";
 
+    const spinLoader = document.getElementById("loader");
+    spinLoader.style.display = "block";
     // Validate Name
     const name = document.getElementById("name").value;
     if (name.length <= 5) {
@@ -124,6 +126,10 @@ document.addEventListener("DOMContentLoaded", function () {
       formMessageElement.textContent =
         "Something went wrong while sending your message. Please try again later.";
       formMessageElement.classList.add("error-message");
+    }
+    finally {
+      // Hide the loader after the form submission is complete
+      spinLoader.style.display = "none";
     }
   });
 });

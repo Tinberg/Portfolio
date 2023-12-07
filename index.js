@@ -142,7 +142,7 @@ ScrollReveal().reveal(
     origin: "top",
     distance: "40px",
     easing: "ease-in",
-    interval: 200, // Set the interval to 200 for these elements
+    interval: 200, 
     beforeReveal: function (el) {
       el.style.transform = "translateY(0)";
       el.style.transition = "transform 0.5s ease";
@@ -159,7 +159,7 @@ ScrollReveal().reveal(".project-card img, .project-text, .project-h3", {
   origin: "top",
   distance: "40px",
   easing: "ease-in",
-  interval: 100, // Set the interval to 100 for these elements to sync with li
+  interval: 100, 
   beforeReveal: function (el) {
     el.style.transform = "translateY(0)";
     el.style.transition = "transform 0.5s ease";
@@ -171,7 +171,7 @@ ScrollReveal().reveal("li:not(header li), li:not(header li) a", {
   origin: "top",
   distance: "40px",
   easing: "ease-in",
-  interval: 100, // Set the interval to 100 for li elements
+  interval: 100, 
   beforeReveal: function (el) {
     el.style.transform = "translateY(0)";
     el.style.transition = "transform 0.5s ease";
@@ -181,3 +181,4 @@ ScrollReveal().reveal("li:not(header li), li:not(header li) a", {
       "background-color 0.2s ease-in-out";
   },
 });
+

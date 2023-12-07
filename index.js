@@ -134,50 +134,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Scroll reveal
-// For h1, h2, h3, and p elements
-ScrollReveal().reveal(
-  "h1, h2, h3, p, .button-container a, .contact-links a, .about-tech-stack, .submit-button ",
-  {
-    origin: "top",
-    distance: "40px",
-    easing: "ease-in",
-    interval: 200, 
-    beforeReveal: function (el) {
-      el.style.transform = "translateY(0)";
-      el.style.transition = "transform 0.5s ease";
-    },
-    afterReveal: function (el) {
-      el.style.transition =
-        "background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out";
-    },
-  }
-);
-
-// For project-card img, project-text, and project-h3 elements
-ScrollReveal().reveal(".project-card img, .project-text, .project-h3", {
+var commonConfig = {
   origin: "top",
   distance: "40px",
   easing: "ease-in",
-  interval: 100, 
-  beforeReveal: function (el) {
-    el.style.transform = "translateY(0)";
-    el.style.transition = "transform 0.5s ease";
-  },
-});
-
-// For li elements
-ScrollReveal().reveal("li:not(header li), li:not(header li) a", {
-  origin: "top",
-  distance: "40px",
-  easing: "ease-in",
-  interval: 100, 
   beforeReveal: function (el) {
     el.style.transform = "translateY(0)";
     el.style.transition = "transform 0.5s ease";
   },
   afterReveal: function (el) {
-    el.style.transition =
-      "background-color 0.2s ease-in-out";
-  },
-});
+    el.style.transition = "background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out";
+  }
+};
+
+// Apply common configuration to different elements
+
+//interval 200
+ScrollReveal().reveal("h1, h2, h3, p, .button-container a, .contact-links a, .about-tech-stack", {...commonConfig, interval: 200});
+ScrollReveal().reveal('#contact-section h2, #contact-section h3, #contact-section .submit-button', {...commonConfig, interval: 200});
+ScrollReveal().reveal('footer p', {...commonConfig, interval: 200});
+
+// interval 100
+ScrollReveal().reveal(".project-card img, .project-text, .project-h3", {...commonConfig, interval: 100});
+ScrollReveal().reveal("li:not(header li), li:not(header li) a", {...commonConfig, interval: 100});
 

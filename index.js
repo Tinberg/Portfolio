@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    //  Nodemailer logic
+    //  Nodemailer logic and error handling
     try {
       const response = await fetch("/.netlify/functions/sendEmail", {
         method: "POST",
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//Scroll reveal
+//ScrollReveal
 var commonConfig = {
   origin: "top",
   distance: "40px",
@@ -145,8 +145,6 @@ var commonConfig = {
     el.style.transition = "background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out";
   }
 };
-
-// Apply common configuration to different elements
 
 //interval 200
 ScrollReveal().reveal("h1, h2, h3, p, .button-container a, .contact-links a, .about-tech-stack", {...commonConfig, interval: 200});

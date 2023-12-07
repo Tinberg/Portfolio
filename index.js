@@ -167,7 +167,7 @@ ScrollReveal().reveal(".project-card img, .project-text, .project-h3", {
 });
 
 // For li elements
-ScrollReveal().reveal("li, li a", {
+ScrollReveal().reveal("li:not(header li), li:not(header li) a", {
   origin: "top",
   distance: "40px",
   easing: "ease-in",

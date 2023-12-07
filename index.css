@@ -21,11 +21,12 @@
   --font-size-45: 2.8rem;
   --font-weight-bold: 700;
   --color-gray37: #5e5e5e;
-  --color-black: black;
-  --color-white: white;
+  --color-dark-shade: #2c3e50;
   --color-red: red;
   --color-green: green;
-  --color-dark-shade: #2c3e50;
+  --color-white: white;
+  /*styles for dark theme*/
+  --color-black: black;
   --background-color-light-gray: #e0e0e0;
   --background-color-white: white;
   --background-color-black: black;
@@ -33,18 +34,24 @@
   --background-linear-gradient2: #e5ebed;
   --box-shadow-color: rgba(0, 0, 0, 0.2);
   --box-shadow-hover-color: rgba(0, 0, 0, 0.35);
+  --button-background: black; /* background black */
+  --button-text-color: white; /*text white */
+  /*hover text color for both themes*/
+  --button-hover-text-color: white;
 }
 
 /*Dark theme */
 [data-theme="dark"] {
-  --color-black: #ffffff; /*white for dark theme*/
-  --background-color-white: #000000; /*Black for dark theme*/
-  --background-linear-gradient1: #121212;
-  --background-linear-gradient2: #1c1c1c;
-  --background-color-light-gray: #2c3e50;
-  --background-color-black: #5e5e5e;/*Lighter black in dark theme*/
-  --box-shadow-color: rgba(150, 150, 150, 0.2); 
-  --box-shadow-hover-color: rgba(150, 150, 150, 0.35);
+  --color-black: #ffffff; /*text white*/
+  --background-color-light-gray: #2c3e50; /*background dark gray */
+  --background-color-white: #000000; /*background black*/
+  --background-color-black: #5e5e5e; /*background gray*/
+  --background-linear-gradient1: #121212; /*background dark*/
+  --background-linear-gradient2: #1c1c1c; /*background dark*/
+  --box-shadow-color: rgba(150, 150, 150, 0.2); /*light black shadow*/
+  --box-shadow-hover-color: rgba(150, 150, 150, 0.35); /*light black shadow*/
+  --button-background: white; /* background white*/
+  --button-text-color: black; /*text black*/
 }
 /*Remove background img dark theme*/
 /* [data-theme="dark"] .section-background-img {
@@ -113,6 +120,12 @@ h2,
 h3 {
   font-family: Montserrat, Arial, sans-serif;
 }
+hr {
+  width: 300px;
+  border-bottom: 2px solid;
+  color: var(--color-gray37);
+  margin: 40px auto;
+}
 .section-background-img {
   background-image: url(/images/background_image.png);
   padding-bottom: 150px;
@@ -128,18 +141,28 @@ h3 {
   padding: 0 20px 200px;
   margin: 0 -20px;
 }
-hr {
-  width: 300px;
-  border-bottom: 2px solid;
-  color: var(--color-gray37);
-  margin: 40px auto;
+
+/*Background and text color for buttons */
+.contact-button,
+.submit-button
+{
+  color: var(--button-text-color);
+  background-color: var(--button-background);
+}
+.contact-button:hover,
+.submit-button:hover {
+  background-color: var(--color-dark-shade);
+  color: var(--button-hover-text-color);
 }
 /*Box shadow*/
-button, .button-container a, .tech-stack-container li {
-  box-shadow: 0 4px 8px var(--box-shadow-color); 
+button,
+.button-container a,
+.tech-stack-container li {
+  box-shadow: 0 4px 8px var(--box-shadow-color);
 }
-button:hover, .button-container a:hover {
-  box-shadow: 0 6px 12px var(--box-shadow-hover-color); 
+button:hover,
+.button-container a:hover {
+  box-shadow: 0 6px 12px var(--box-shadow-hover-color);
 }
 
 /*For section 2 and 4*/
@@ -203,13 +226,9 @@ header {
   margin-right: 80px;
 }
 .header-navigation .corner-li a {
-  background-color: var(--background-color-black);
-  color: var(--color-white);
   border-radius: 15px;
 }
-.header-navigation .corner-li a:hover {
-  background-color: var(--color-dark-shade);
-}
+
 /* hambruger menu */
 .menu-icon {
   display: none;
@@ -334,20 +353,13 @@ input:checked + .slider .label.dark {
   border-radius: 20px;
 }
 /*Dark theme border*/
-[data-theme="dark"] .contact-button, .project-button {
+[data-theme="dark"] .contact-button,
+.project-button {
   border: 2px solid;
-}
-
-.contact-button {
-  background: var(--background-color-black);
-  color: var(--color-white);
 }
 
 .project-button:hover {
   background-color: var(--background-color-light-gray);
-}
-.contact-button:hover {
-  background-color: var(--color-dark-shade);
 }
 
 /* =====================
@@ -404,7 +416,7 @@ input:checked + .slider .label.dark {
 .fa-linkedin {
   padding: 10px;
   font-size: 35px;
-  transition: transform 0.3s ease-in-out
+  transition: transform 0.3s ease-in-out;
 }
 
 .fa-github:hover,
@@ -456,14 +468,10 @@ input:checked + .slider .label.dark {
   padding: 5px 40px;
   border-radius: 10px;
   font-size: var(--font-size-22);
-  color: var(--color-white);
-  background-color: var(--background-color-black);
+
   margin-top: 10px;
   align-self: flex-end;
   cursor: pointer;
-}
-.submit-button:hover {
-  background-color: var(--color-dark-shade);
 }
 .hidden {
   display: none;

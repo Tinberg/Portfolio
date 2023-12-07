@@ -128,7 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "Something went wrong while sending your message. Please try again later.";
       formMessageElement.classList.add("error-message");
     } finally {
-      // Hide the loader after the form submission is complete
       spinLoader.style.display = "none";
     }
   });

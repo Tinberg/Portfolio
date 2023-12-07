@@ -31,6 +31,8 @@
   --background-color-black: black;
   --background-linear-gradient1: #f7f9fa;
   --background-linear-gradient2: #e5ebed;
+  --box-shadow-color: rgba(0, 0, 0, 0.2);
+  --box-shadow-hover-color: rgba(0, 0, 0, 0.35);
 }
 
 /*Dark theme */
@@ -40,7 +42,9 @@
   --background-linear-gradient1: #121212;
   --background-linear-gradient2: #1c1c1c;
   --background-color-light-gray: #2c3e50;
-  --background-color-black: #5e5e5e;
+  --background-color-black: #5e5e5e;/*Lighter black in dark theme*/
+  --box-shadow-color: rgba(150, 150, 150, 0.2); 
+  --box-shadow-hover-color: rgba(150, 150, 150, 0.35);
 }
 /*Remove background img dark theme*/
 /* [data-theme="dark"] .section-background-img {
@@ -129,6 +133,13 @@ hr {
   border-bottom: 2px solid;
   color: var(--color-gray37);
   margin: 40px auto;
+}
+/*Box shadow*/
+button, .button-container a, .tech-stack-container li {
+  box-shadow: 0 4px 8px var(--box-shadow-color); 
+}
+button:hover, .button-container a:hover {
+  box-shadow: 0 6px 12px var(--box-shadow-hover-color); 
 }
 
 /*For section 2 and 4*/
@@ -319,13 +330,18 @@ input:checked + .slider .label.dark {
 .button-container a {
   padding: 10px 50px;
   margin: 0 20px;
-  border: 2px solid;
   border-radius: 20px;
 }
+/*Dark theme border*/
+[data-theme="dark"] .contact-button, .project-button {
+  border: 2px solid;
+}
+
 .contact-button {
   background: var(--background-color-black);
   color: var(--color-white);
 }
+
 .project-button:hover {
   background-color: var(--background-color-light-gray);
 }
@@ -387,15 +403,13 @@ input:checked + .slider .label.dark {
 .fa-linkedin {
   padding: 10px;
   font-size: 35px;
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out
 }
 
 .fa-github:hover,
 .fa-paperclip:hover,
 .fa-linkedin:hover {
-  transform: scale(1.2);
-  color: var(--color-dark-shade);
+  transform: scale(1.25);
 }
 
 /* =====================

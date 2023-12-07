@@ -194,6 +194,7 @@ header {
   padding: 5px 35px 5px;
   font-size: var(--font-size-22);
   border-radius: 15px;
+  transform: background-transition 0.2s;
 }
 .header-navigation a:hover {
   background-color: var(--background-color-light-gray);

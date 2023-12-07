@@ -24,14 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
 //--------dark/light mode--------//
 document.addEventListener("DOMContentLoaded", function () {
   const themeSwitch = document.getElementById("themeSwitch");
-  const currentTheme = localStorage.getItem("theme");
+  const currentTheme = localStorage.getItem("theme") || "dark"; 
 
-  if (currentTheme) {
-    document.documentElement.setAttribute("data-theme", currentTheme);
+  document.documentElement.setAttribute("data-theme", currentTheme);
 
-    if (currentTheme === "dark") {
-      themeSwitch.checked = true;
-    }
+  if (currentTheme === "dark") {
+    themeSwitch.checked = true;
   }
 
   themeSwitch.addEventListener("change", function () {
@@ -44,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
 
 //--------Form --------//
 

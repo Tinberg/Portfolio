@@ -71,7 +71,6 @@
   text-decoration: none;
   box-sizing: border-box;
 }
-
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -141,11 +140,9 @@ hr {
   padding: 0 20px 200px;
   margin: 0 -20px;
 }
-
 /*Background and text color for buttons */
 .contact-button,
-.submit-button
-{
+.submit-button {
   color: var(--button-text-color);
   background-color: var(--button-background);
 }
@@ -222,11 +219,9 @@ header {
 .header-navigation a:hover {
   background-color: var(--background-color-light-gray);
 }
+
 .header-navigation .corner-li {
   margin-right: 80px;
-}
-.header-navigation .corner-li a {
-  border-radius: 15px;
 }
 
 /* hambruger menu */
@@ -236,22 +231,24 @@ header {
   padding: 5px;
   cursor: pointer;
 }
-#menuItems.active {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  background-color: var(--background-color-white); /*Black for dar theme*/
-}
-#menuItems.active li {
-  margin: 20px 0;
-}
 .bar {
   width: 30px;
   height: 3px;
   background-color: var(--color-black); /*White for dark theme*/
   margin: 6px 0;
-  transition: 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
+}
+.menu-icon.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.menu-icon.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+#menuItems.active {
+  max-height: 500px;
 }
 
 /* Switch styles */
@@ -512,7 +509,6 @@ input:checked + .slider .label.dark {
 footer {
   margin: 100px -20px 50px;
   color: var(--color-black); /*White for dark theme*/
-
   padding: 30px;
 }
 .footer-text {
@@ -536,9 +532,23 @@ footer {
     display: block;
   }
   #menuItems {
-    display: none;
     flex-direction: column;
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    background-color: var(--background-color-white);
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 0;
+    text-align: center;
   }
+  .header-navigation li {
+    margin: 20px 0;
+  }
+  .header-navigation .corner-li {
+    margin: 20px 0 25px 0;
+  }
+
   label.switch {
     order: 3;
   }

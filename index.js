@@ -11,11 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuLinks = document.querySelectorAll("#menuItems li a");
 
   menuIcon.addEventListener("click", function () {
+    this.classList.toggle("active");
     menuItems.classList.toggle("active");
   });
 
   menuLinks.forEach((link) => {
     link.addEventListener("click", () => {
+      menuIcon.classList.remove("active");
       menuItems.classList.remove("active");
     });
   });

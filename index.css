@@ -332,7 +332,11 @@ input:checked + .slider .label.dark {
 /* =====================
    Section1 HERO 
    ===================== */
-
+.avatar{
+  height: 200px;
+  width: auto;
+  margin-top: 10px;
+}
 .hero-about-paragraph {
   margin-bottom: 60px;
   max-width: 1800px;

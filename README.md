@@ -39,10 +39,14 @@ git clone git@github.com:Tinberg/Portfolio.git
   npm install netlify-cli -g
   ```
 - Navigate to your project and run:
-  ```bash netlify init```
+  ```bash
+  netlify init
+  ```
 - Create a directory in your project `netlify/functions. Here you can write your serverless function and netlify will automatically deplay these as serverless functions when pushed.
 - Create a`netlify.toml`file in your root of your project, and in this case:
-   ```javascript[build] functions = "netlify/functions"```
+   ```javascript
+  [build] functions = "netlify/functions"
+   ```
 
 
 

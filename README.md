@@ -28,7 +28,9 @@ Use this in your your head element in HTML:
 <script src="https://unpkg.com/scrollreveal"></script>
 ```
 or Download it: 
-```bash npm install scrollreveal --save```
+```bash npm install scrollreveal
+```
+it will be added under dependencies in your `package.json` file.
 
 ### Netlfify serverless function with node.js/Nodemailer
 

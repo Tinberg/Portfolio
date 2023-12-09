@@ -14,11 +14,14 @@ Welcome to my debut portfolio! My vision for this project was to create somethin
 
 
 ## Getting Started
+
 ### Script
 Use this in your your head element in HTML: 
 ```html
 <script src="https://unpkg.com/scrollreveal"></script>
 ```
+or Download it: 
+```bash npm install scrollreveal --save```
 ### Installing
 
 1. Clone the repo:

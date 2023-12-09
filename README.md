@@ -30,6 +30,27 @@ Use this in your your head element in HTML:
 or Download it: 
 ```bash npm install scrollreveal --save```
 
+### Netlfify serverless function with node.js/Nodemailer
+
+#### Node.js/Nodemailer
+- Visit the official [Node.js](https://nodejs.org/en) and download the installer for your operating system (windows.macOS or Linus)
+- Run the Installer and follow the on-screen instructions to install node.js and npm(Node´s package manager).
+- Open your terminal or PowerShell.
+- Run the command node -v to check the Node.js version.
+- Run the command npm -v to check the npm version.
+- These commands ensure Node.js and npm are successfully installed on your system.
+
+#### Netlify
+- Install Netlify CLI:
+  ```bash npm install netlify-cli -g```
+- Navigate to your project and run:
+  ```bash netlify init```
+- Create a directory in your project `netlify/functions. Here you can write your serverless function and netlify will automatically deplay these as serverless functions when pushed.
+- Create a`netlify.toml`file in your root of your project, and in this case:
+   ```javascript[build] functions = "netlify/functions"```
+
+
+
 ## Contact me
 
 [![386655_linkedin_linked in_icon](https://github.com/Tinberg/Rainydays/assets/126072224/ec1dfc29-cc5c-4c56-90c0-7c4b4808ba1c)](https://www.linkedin.com/in/mathias-tinberg-a13147113/)

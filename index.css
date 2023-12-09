@@ -582,8 +582,7 @@ footer {
     width: 100%;
   }
   .section-background {
-    padding: 0 0 150px;
-    margin: 150px 0 0;
+    padding-bottom:150px;
   }
   /*Section 1*/
   .full-name {

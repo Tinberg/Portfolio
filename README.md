@@ -22,18 +22,6 @@ Welcome to my debut portfolio! My vision for this project was to create somethin
 ```bash
 git clone git@github.com:Tinberg/Portfolio.git
 ```
-### ScrollReveal script or download
-Use this in your your head element in HTML: 
-```html
-<script src="https://unpkg.com/scrollreveal"></script>
-```
-or Download it: 
-
-```bash
-npm install scrollreveal
-```
-
-it will be added under dependencies in your `package.json` file.
 
 ### Netlfify serverless function with node.js/Nodemailer
 
@@ -54,6 +42,20 @@ it will be added under dependencies in your `package.json` file.
 - Create a`netlify.toml`file in your root of your project, and in this case:
    ```javascript[build] functions = "netlify/functions"```
 
+
+
+### ScrollReveal script or download
+Use this in your your head element in HTML: 
+```html
+<script src="https://unpkg.com/scrollreveal"></script>
+```
+or Download it: 
+
+```bash
+npm install scrollreveal
+```
+
+it will be added under dependencies in your `package.json` file.
 
 
 ## Contact me

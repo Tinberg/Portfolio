@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "fiks så man kan trykke på knappene på linkene i header. lag den responsive js:  fiks dark mode toggle button parallax scrolling/animations on scroll som AOS form validation",
+  "description": "A responsive and interactive personal portfolio website featuring dark mode, scrollReveal, and form validation with a serverless netlify function using node.js.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

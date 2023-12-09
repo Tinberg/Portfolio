@@ -29,8 +29,8 @@ Use this in your your head element in HTML:
 ```
 or Download it: 
 
-```bash npm install scrollreveal
-```
+```bash
+npm install scrollreveal
 
 it will be added under dependencies in your `package.json` file.
 

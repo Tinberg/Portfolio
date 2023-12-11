@@ -413,7 +413,7 @@ input:checked + .slider .label.dark {
   margin: 5px;
 }
 .fa-github,
-.fa-paperclip,
+.fa-link,
 .fa-linkedin {
   padding: 10px;
   font-size: 35px;
@@ -421,7 +421,7 @@ input:checked + .slider .label.dark {
 }
 
 .fa-github:hover,
-.fa-paperclip:hover,
+.fa-link:hover,
 .fa-linkedin:hover {
   transform: scale(1.25);
 }

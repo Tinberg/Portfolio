@@ -143,13 +143,14 @@ var commonConfig = {
     el.style.transform = "translateY(0)";
     el.style.transition = "transform 0.5s ease";
   },
+  //make use of transition after scrollReveal is done
   afterReveal: function (el) {
     el.style.transition = "background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out";
   }
 };
 
 //interval 200
-ScrollReveal().reveal("h1, h2, h3, p, .button-container a, .contact-links a, .about-tech-stack", {...commonConfig, interval: 200});
+ScrollReveal().reveal("h1, h2, h3, p:not(.error-message):not(.form-message), .button-container a, .contact-links a, .about-tech-stack", {...commonConfig, interval: 200});
 ScrollReveal().reveal('#contact-section h2, #contact-section h3, #contact-section .submit-button', {...commonConfig, interval: 200});
 ScrollReveal().reveal('footer p', {...commonConfig, interval: 200});
 

@@ -5,7 +5,7 @@
 
 ## Description
 
-Welcome to my debut portfolio! My vision for this project was to create something simple, yet visually appealing. This portfolio is a curated showcase of all my projects to date, thoughtfully presented in a clean and engaging format. It reflects my journey in the world of development and design, highlighting my skills and the progress I've made so far.
+Welcome to my debut portfolio! My vision for this project was to create something simple, yet visually appealing. This portfolio is a curated showcase of all my projects to date, thoughtfully presented in a clean and engaging format. It reflects my journey in the world of development and design, highlighting my skills and the progress I've made so far
 
 ## Built With
 

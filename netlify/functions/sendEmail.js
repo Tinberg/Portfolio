@@ -1,22 +1,16 @@
 const nodemailer = require('nodemailer');
 
 exports.handler = async function(event, context) {
-    console.log('Function triggered');
-
+    
     if (event.httpMethod !== "POST") {
-        console.log('Method Not Allowed');
         return { statusCode: 405, body: "Method Not Allowed" };
     }
 
     const { name, email, message, contactInfo } = JSON.parse(event.body);
-    console.log(`Received message from: ${name}, email: ${email}`);
-
     const senderEmail = 'tinberg92@hotmail.com';
 
     const transporter = nodemailer.createTransport({
-        host: 'smtp-mail.outlook.com',
-        port: 587,
-        secure: false, // use STARTTLS
+        service: 'hotmail', 
         auth: {
             user: process.env.EMAIL_USER,
             pass: process.env.EMAIL_PASS
@@ -25,9 +19,10 @@ exports.handler = async function(event, context) {
 
     const mailOptions = {
         from: senderEmail,
-        to: senderEmail,
+        to: senderEmail, 
         subject: `Message from ${name}`,
-        text: `Message: ${message}\nEmail from: ${email}`
+        text: `message: ${message}\nEmail from: ${email}` 
+        
     };
 
     try {

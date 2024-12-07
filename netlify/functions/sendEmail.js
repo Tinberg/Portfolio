@@ -26,12 +26,10 @@ exports.handler = async function(event, context) {
     };
 
     try {
-        console.log('Sending email...');
         await transporter.sendMail(mailOptions);
-        console.log('Email sent successfully!');
         return { statusCode: 200, body: "Email sent!" };
     } catch (error) {
-        console.error('Error sending email:', error);
         return { statusCode: 500, body: "Error sending email: " + error.message };
     }
 };
+
